@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE permissions >
+
+<permissions>
+
+    <!-- Namespaces used in type references -->
+
+   <namespaces>
+      <namespace uri="http://www.alfresco.org/model/system/1.0" prefix="sys"/>
+      <namespace uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+      <namespace uri="http://www.alfresco.org/model/site/1.0" prefix="st"/>
+   </namespaces>
+
+   <!-- ============================================ -->
+   <!-- Permissions specific to the wiki integration -->
+   <!-- ============================================ -->
+
+   <permissionSet type="st:site" expose="selected">
+
+      <permissionGroup name="SiteManager" allowFullControl="true" expose="true" />
+
+      <permissionGroup name="SiteCollaborator" allowFullControl="false" expose="true">
+         <includePermissionGroup permissionGroup="Collaborator" type="cm:cmobject" />
+      </permissionGroup>
+
+      <permissionGroup name="SiteContributor" allowFullControl="false" expose="true">
+         <includePermissionGroup permissionGroup="Contributor" type="cm:cmobject" />
+      </permissionGroup>
+
+      <permissionGroup name="SiteConsumer" allowFullControl="false" expose="true">
+         <includePermissionGroup permissionGroup="Consumer" type="cm:cmobject" />
+         <includePermissionGroup permissionGroup="ReadPermissions" type="sys:base" />
+      </permissionGroup>
+
+      <permissionGroup name="ServiceCourrierEntrant" allowFullControl="false" expose="true"/>
+      <permissionGroup name="ServiceCourrierSortant" allowFullControl="false" expose="true"/>
+      <permissionGroup name="GEC" allowFullControl="false" expose="true"/>
+      <permissionGroup name="GED" allowFullControl="false" expose="true"/>
+      <permissionGroup name="SAE" allowFullControl="false" expose="true"/>
+      <permissionGroup name="ValidationCourrier" allowFullControl="false" expose="true"/>
+      <permissionGroup name="Signaturecourrier" allowFullControl="false" expose="true"/>
+      <permissionGroup name="Archiviste" allowFullControl="false" expose="true"/>
+      <permissionGroup name="Statistique" allowFullControl="false" expose="true"/>
+
+      <permission name="_GEC" expose="false">
+        <grantedToGroup permissionGroup="GEC"/>
+      </permission>
+      <permission name="_GED" expose="false">
+        <grantedToGroup permissionGroup="GED"/>
+      </permission>
+      <permission name="_SAE" expose="false">
+        <grantedToGroup permissionGroup="SAE"/>
+      </permission>
+      <permission name="_ServiceCourrierEntrant" expose="false">
+        <grantedToGroup permissionGroup="ServiceCourrierEntrant"/>
+      </permission>
+      <permission name="_Service_Courrier_Sortant" expose="false">
+        <grantedToGroup permissionGroup="ServiceCourrierSortant"/>
+      </permission>
+      <permission name="_Validation_Courrier" expose="false">
+        <grantedToGroup permissionGroup="Validation_Courrier"/>
+      </permission>
+      <permission name="_Archiviste" expose="false">
+        <grantedToGroup permissionGroup="Archiviste"/>
+      </permission>
+      <permission name="Statistique" expose="false">
+        <grantedToGroup permissionGroup="Statistique"/>
+      </permission>
+
+   </permissionSet>
+
+</permissions>

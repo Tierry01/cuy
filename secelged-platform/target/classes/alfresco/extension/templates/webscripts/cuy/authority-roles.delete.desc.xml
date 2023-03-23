@@ -1,0 +1,14 @@
+<webscript>
+   <shortname>Delete authority roles in a site</shortname>
+   <description>Delete authority roles in a site</description>
+   <url>/siged/authority/{authority}/roles</url>
+   <format default="json">argument</format>
+   <authentication>user</authentication>
+   <transaction>required</transaction>
+   <args>
+      <arg>
+         <shortname>authority</shortname>
+         <description>authority id</description>
+      </arg>
+   </args>
+</webscript>

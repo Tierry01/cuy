@@ -1,0 +1,4 @@
+<page>
+   <template-instance>gec-OutBount</template-instance>
+   <authentication>user</authentication>
+</page>

@@ -1,0 +1,18 @@
+<webscript>
+   <shortname>Get authority roles in a site</shortname>
+   <description>Get authority roles in a site</description>
+   <url>/cuy/api/authorit/roles</url>
+   <format default="json">argument</format>
+   <authentication>user</authentication>
+   <transaction>none</transaction>
+   <args>
+      <arg>
+         <shortname>authority</shortname>
+         <description>authority id</description>
+      </arg>
+      <arg>
+         <shortname>siteId</shortname>
+         <description>site id</description>
+      </arg>
+   </args>
+</webscript>
